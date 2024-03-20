@@ -8,4 +8,4 @@ pipeline {
            echo 'buiding a demo project...'
     }
  }
- 	
+    } 	
