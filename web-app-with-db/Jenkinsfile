@@ -1,9 +1,10 @@
 pipeline {
-    agent {
-    label 'agent1' 
+    agent { label 'agent1' }
+    stages {
+        stage('build') {
+            steps {
+                echo 'smita demo working...'
+            }
+        }
     }
-   stages('Build'){
-         echo 'buiding a demo project...'
-    }
- }
-    	
+}	
