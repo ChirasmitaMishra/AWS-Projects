@@ -1,10 +1,11 @@
 pipeline {
     agent {
     label 'agent1' 
-}
-   stages('Build'){
-      echo 'buiding a demo project...'
-
- 
     }
- 	}
+   stages('Build'){
+       steps{
+           sh 'cd web-app-with-db'
+           echo 'buiding a demo project...'
+    }
+ }
+ 	
