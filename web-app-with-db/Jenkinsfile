@@ -5,6 +5,7 @@ pipeline {
             steps {
                 echo 'Building Container...'
                 // Commands to build the project
+                sh 'cd web-app-with-db/'
                 sh 'docker-compose up -d' 
                 //sh 'sudo docker run --name nginx-jenkins -d nginx'
             }
