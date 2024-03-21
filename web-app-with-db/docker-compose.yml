@@ -1,7 +1,5 @@
 version: '3.8'
 
-volumes:
-  datafiles:
 
 services:
   mysql:
@@ -10,8 +8,7 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=secret
       - MYSQL_TCP_PORT=3306
-    volumes:
-      - datafiles:/var/lib/mysql
+    
     restart: always
 
   website:
