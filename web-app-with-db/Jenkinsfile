@@ -6,7 +6,7 @@ pipeline {
                 echo 'Building Container...'
                 // Commands to build the project
                 //sh 'docker-compose up -d' 
-                sh 'sudo docker run --name nginx-jenkins -d nginx'
+                sh 'docker run --name nginx-jenkins -d nginx'
             }
         }
         
