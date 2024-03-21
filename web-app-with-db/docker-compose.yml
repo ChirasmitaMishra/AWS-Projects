@@ -6,7 +6,7 @@ volumes:
 services:
   mysql:
     image: mysql:8.0.0
-    container_name: mysql8
+    container_name: mysql8-1
     environment:
       - MYSQL_ROOT_PASSWORD=secret
       - MYSQL_TCP_PORT=3306
@@ -15,7 +15,7 @@ services:
     restart: always
 
   website:
-    container_name: php73
+    container_name: php73-1
     build:
       context: .
       dockerfile: Dockerfile
@@ -26,7 +26,7 @@ services:
       - MYSQL_DBPASS=secret
       #- MYSQL_DBNAME=
     ports:
-      - 8080:80
-      - 8083:443
+      - 8081:80
+      - 8084:443
     depends_on:
       - mysql
