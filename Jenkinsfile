@@ -10,8 +10,8 @@ pipeline {
             steps {
                 echo 'Building Container...'
                 // Commands to build the project
-                sh 'docker-compose up -d' 
-                //sh 'docker-compose -f /web-app-with-db/src/docker-compose.yml up'
+                //sh 'docker-compose up -d' 
+                  sh 'docker-compose -f /web-app-with-db/src/docker-compose.yml up'
                 //sh 'sudo docker run --name nginx-jenkins -d nginx'
             }
         }
