@@ -5,7 +5,8 @@ pipeline {
             steps {
                 echo 'Building Container...'
                 // Commands to build the project
-                sh 'docker-compose up -d' 
+                //sh 'docker-compose up -d' 
+                sh 'touch smita.txt'
             }
         }
         
